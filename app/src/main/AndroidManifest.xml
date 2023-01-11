@@ -26,9 +26,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".FActy2"
-            android:exported="false"/>
-
     </application>
 
 </manifest>
