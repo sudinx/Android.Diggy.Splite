@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CobSimpProApp.iml" filepath="$PROJECT_DIR$/.idea/modules/CobSimpProApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CobSimpProApp.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.iml" filepath="$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.main.iml" filepath="$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/heniefont/CobSimpProApp.heniefont.unitTest.iml" />
+    </modules>
+  </component>
+</project>
