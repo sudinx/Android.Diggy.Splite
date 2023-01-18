@@ -25,7 +25,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.browser.customtabs.CustomTabsIntent;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
 import com.facebook.ads.AbstractAdListener;
 import com.facebook.ads.Ad;
@@ -167,6 +166,11 @@ public class BappClaass {
     public static String app_CustomeAdBannerSubHanderText = "";
     public static String app_CustomeADBannerLink = "";
 
+    public static String Only_QurekaStatus = "";
+    public static String app_OnlyQurekaLink = "";
+
+
+
 
     // easy to decalr for use varibvable list
 
@@ -181,7 +185,6 @@ public class BappClaass {
     static RelativeLayout fbBanerLayout2 = null;
     static RelativeLayout fbBanerLayout3 = null;
 
-
     static RelativeLayout admobNativeBanerLayout = null;
     static RelativeLayout admobNativeBanerLayout2 = null;
     static RelativeLayout admobNativeBanerLayout3 = null;
@@ -189,7 +192,6 @@ public class BappClaass {
     static RelativeLayout fbNativeBanerLayout = null;
     static RelativeLayout fbNativeBanerLayout2 = null;
     static RelativeLayout fbNativeBanerLayout3 = null;
-
 
     static LinearLayout admobNativeNewLayout = null;
     static LinearLayout admobNativeNewLayout2 = null;
@@ -358,6 +360,9 @@ public class BappClaass {
         app_CustomeAdBannerHanderText = jsonObject.getString("app_CustomeAdBannerHanderText");
         app_CustomeAdBannerSubHanderText = jsonObject.getString("app_CustomeAdBannerSubHanderText");
         app_CustomeADBannerLink = jsonObject.getString("app_CustomeADBannerLink");
+
+        Only_QurekaStatus = jsonObject.getString("Only_QurekaStatus");
+        app_OnlyQurekaLink = jsonObject.getString("app_OnlyQurekaLink");
 
 
     }
@@ -1994,10 +1999,14 @@ public class BappClaass {
     /// old native code ------------------------------------------------------------------------
 
     public void ads_NativeCall(ViewGroup native_container) {
-        if (app_NativeAdCodeType.equalsIgnoreCase("new")) {
-            showNativeNew(native_container);
-        } else {
-            showNative(native_container);
+        if (app_OnlyNativeADShow.equalsIgnoreCase("true")) {
+            native_container.setVisibility(View.GONE);
+        }else{
+            if (app_NativeAdCodeType.equalsIgnoreCase("new")) {
+                showNativeNew(native_container);
+            } else {
+                showNative(native_container);
+            }
         }
     }
 
@@ -3073,6 +3082,9 @@ public class BappClaass {
     /// custome code ------------------------------------------------------------------------
 
     public void onlyCustBannerCallAD(Activity activity) {
+        if (app_AllAdShowStatus == 0) {
+            return;
+        }
         if (app_OnlyBannerADShow.equalsIgnoreCase("true")) {
             Log.e(TAG, "onlyCustBannerCallAD: ");
             LinearLayout iv_qurekabanner = activity.findViewById(R.id.iv_qurekabanner);
@@ -3097,6 +3109,9 @@ public class BappClaass {
     }
 
     public void onlyCustNativeCallAD(Activity activity) {
+        if (app_AllAdShowStatus == 0) {
+            return;
+        }
         if (app_OnlyNativeADShow.equalsIgnoreCase("true")) {
             LinearLayout iv_qurekanative = activity.findViewById(R.id.iv_qurekanative);
             ImageView ad_app_icon = activity.findViewById(R.id.ad_app_icon);
@@ -3149,7 +3164,7 @@ public class BappClaass {
                         LinearLayout intest_layout = dialogView.findViewById(R.id.intest_layout);
                         intest_layout.setVisibility(View.VISIBLE);
                         ImageView iv_intersFullImage = dialogView.findViewById(R.id.iv_intersFullImage);
-                        LottieAnimationView iv_intersFullImageCancel = dialogView.findViewById(R.id.iv_intersFullImageCancel);
+                        ImageView iv_intersFullImageCancel = dialogView.findViewById(R.id.iv_intersFullImageCancel);
 
                         Glide.with(activity).load(app_CustomeAdInterFullscreenImg).into(iv_intersFullImage);
 
