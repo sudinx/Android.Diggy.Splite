@@ -170,8 +170,6 @@ public class BappClaass {
     public static String app_OnlyQurekaLink = "";
 
 
-
-
     // easy to decalr for use varibvable list
 
     public static Activity activity;
@@ -1999,9 +1997,18 @@ public class BappClaass {
     /// old native code ------------------------------------------------------------------------
 
     public void ads_NativeCall(ViewGroup native_container) {
-        if (app_OnlyNativeADShow.equalsIgnoreCase("true")) {
-            native_container.setVisibility(View.GONE);
-        }else{
+        if (app_AllAdShowStatus == 0) {
+            return;
+        }
+
+        if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false") && AD_MOB_STATUS.equalsIgnoreCase("false")) {
+            if (app_OnlyNativeADShow.equalsIgnoreCase("true")) {
+                native_container.setVisibility(View.GONE);
+                onlyCustNativeCallAD(activity);
+            } else {
+                native_container.setVisibility(View.GONE);
+            }
+        } else {
             if (app_NativeAdCodeType.equalsIgnoreCase("new")) {
                 showNativeNew(native_container);
             } else {
